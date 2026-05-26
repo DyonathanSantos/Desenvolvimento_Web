@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="secao-padrao">
+        <div class="container">
+
+            <h1 class="text-center">To Do List Project</h1>
+            <p class="text-center">Controle suas tarefas de forma simples e direta</p>
+            <br>
+
+            <div class="linha">
+                <!-- Coluna da Esquerda: Add tarefas-->
+                 <div class="coluna2">
+                    <div class="card-perfil">
+                        <h3>Tarefas</h3>
+                        <br>
+                        <form id="form-tarefa"   
+                        class="formulario-padrao"> <!-- deixar com id, pois não precisa lançar ao servidor -->
+                            <div class="campo-grupo">
+                                <label for="tarefa">Nome da Tarefa:</label>
+                                <input type="text" id="tarefa" name="tarefa" value="Limpar a Casa" required>
+                            </div>
+                            <div class="campo-grupo">
+                                <label for="observacao">Observações:</label>
+                                <textarea name="observacao" id="observacoes" cols="50" rows="4" placeholder="Digite sua observacões aqui..."></textarea>
+                            </div>
+                            <button type="submit" class="botao">
+                                Adicionar Tarefa
+                            </button>
+                        </form>
+                    </div>
+                 </div>
+
+                 <!--  Coluna da Direita: Lista de Tarefas-->
+                 <div class="coluna2">
+                    <div class="card-perfil">
+                        <h3>Lista de Tarefas</h3>
+                        <br>
+                        <table class="tabela-padrao">
+                            <thead>
+                                <tr>
+                                    <th>Tarefas</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="lista-tarefas"> <!-- Id em table para JS jogar as tarefas aqui. -->
+                            </tbody>
+                        </table>
+                    </div>
+                 </div>
+            </div>
+            
+
+        </div>
+    </main>
+
+<script src="script.js"></script>
+</body>
+
+</html>
